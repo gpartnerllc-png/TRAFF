@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffmonetizer Installer | Script Universal para VPS e Cloud</title>
+  <meta name="description" content="Instalador completo do Traffmonetizer para AWS, Oracle Cloud, Google Cloud, Azure, Vultr, Hetzner e qualquer VPS. Suporte a múltiplos containers e detecção automática de arquitetura.">
+  <meta name="keywords" content="traffmonetizer, traffmonetizer installer, script traffmonetizer, vps, aws, oracle cloud, google cloud, azure, docker">
+  <meta name="author" content="gpartnerllc-png">
+  <meta name="robots" content="index, follow">
+
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --success: #22c55e;
+      --border: #334155;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      background: linear-gradient(135deg, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(99, 102, 241, 0.15);
+      color: #a5b4fc;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      margin: 8px 4px;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+
+    .card h2 {
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+      color: #c7d2fe;
+    }
+
+    pre {
+      background: #020617;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      overflow-x: auto;
+      font-size: 0.92rem;
+      color: #a5f3fc;
+      margin: 14px 0;
+    }
+
+    code {
+      font-family: 'Fira Code', 'Consolas', monospace;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+      margin: 6px 4px;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: #a5b4fc;
+    }
+
+    .btn-outline:hover {
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    ul {
+      padding-left: 20px;
+      color: var(--text-muted);
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .feature {
+      background: rgba(99, 102, 241, 0.08);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .feature strong {
+      display: block;
+      color: #c7d2fe;
+      margin-bottom: 4px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Traffmonetizer Installer</h1>
+      <p>Script universal para instalar o Traffmonetizer em qualquer servidor</p>
+      <div>
+        <span class="badge">AWS</span>
+        <span class="badge">Oracle Cloud</span>
+        <span class="badge">Google Cloud</span>
+        <span class="badge">Azure</span>
+        <span class="badge">Vultr</span>
+        <span class="badge">Hetzner</span>
+        <span class="badge">DigitalOcean</span>
+      </div>
+    </header>
+
+    <div class="card">
+      <h2>Instalação Rápida</h2>
+      <p>Copie e cole os comandos abaixo no seu servidor:</p>
+      <pre><code>curl -O https://raw.githubusercontent.com/gpartnerllc-png/TRAFF/main/install-traffmonetizer.sh
+chmod +x install-traffmonetizer.sh
+TOKEN=seu_token_aqui QUANTIDADE=1 bash install-traffmonetizer.sh</code></pre>
+
+      <p style="margin-top: 16px; color: var(--text-muted); font-size: 0.95rem;">
+        Substitua <code>seu_token_aqui</code> pelo seu token real do Traffmonetizer.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Exemplos de Uso</h2>
+
+      <p><strong>1 container:</strong></p>
+      <pre><code>TOKEN=seu_token bash install-traffmonetizer.sh</code></pre>
+
+      <p><strong>3 containers:</strong></p>
+      <pre><code>TOKEN=seu_token QUANTIDADE=3 DEVICE_NAME=Oracle bash install-traffmonetizer.sh</code></pre>
+
+      <p><strong>12 containers (exemplo):</strong></p>
+      <pre><code>TOKEN=seu_token QUANTIDADE=12 DEVICE_NAME=AWS PREFIXO=traff bash install-traffmonetizer.sh</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Recursos</h2>
+      <div class="grid">
+        <div class="feature">
+          <strong>Detecção Automática</strong>
+          x86_64 / ARM64 / ARM32
+        </div>
+        <div class="feature">
+          <strong>Múltiplos Containers</strong>
+          Rode quantos quiser
+        </div>
+        <div class="feature">
+          <strong>Todas as Clouds</strong>
+          AWS, GCP, Azure, Oracle...
+        </div>
+        <div class="feature">
+          <strong>Reinício Automático</strong>
+          --restart always
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Comandos Úteis</h2>
+      <pre><code># Ver containers rodando
+docker ps
+
+# Ver logs
+docker logs traff-1
+
+# Reiniciar um container
+docker restart traff-1
+
+# Parar todos
+docker stop $(docker ps -q --filter name=traff)
+
+# Remover todos
+docker rm -f $(docker ps -aq --filter name=traff)</code></pre>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+      <a href="https://github.com/gpartnerllc-png/TRAFF" class="btn">Ver no GitHub</a>
+      <a href="https://raw.githubusercontent.com/gpartnerllc-png/TRAFF/main/install-traffmonetizer.sh" class="btn btn-outline">Baixar Script</a>
+    </div>
+
+    <footer>
+      <p>Script open-source para instalação do Traffmonetizer</p>
+      <p style="margin-top: 6px;">Use por sua conta e risco. Respeite os Termos de Uso das plataformas.</p>
+    </footer>
+  </div>
+</body>
+</html>
