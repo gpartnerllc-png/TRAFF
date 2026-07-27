@@ -31,7 +31,7 @@ if [ -z "$TOKEN" ]; then
   echo -e "\( {YELLOW}TOKEN=seu_token QUANTIDADE=3 bash install-traffmonetizer.sh \){NC}"
   echo ""
   echo "Exemplo completo:"
-  echo "TOKEN=UC15l5C72G5ulQPFyGX2DOum8utG9Y/PhPDQAnQDQmU= QUANTIDADE=3 DEVICE_NAME=Cloud bash install-traffmonetizer.sh"
+  echo "TOKEN=seu_token QUANTIDADE=3 DEVICE_NAME=Cloud bash install-traffmonetizer.sh"
   exit 1
 fi
 
@@ -120,7 +120,7 @@ echo -e "Quantidade      : ${YELLOW}\( QUANTIDADE \){NC}"
 echo ""
 echo "Comandos úteis:"
 echo "  docker ps"
-echo "  docker logs tm-1"
-echo "  docker restart tm-1"
-echo "  docker stop \$(docker ps -q --filter name=tm)"
-echo "  docker rm -f \$(docker ps -aq --filter name=tm)"
+echo "  docker logs ${PREFIXO}-1"
+echo "  docker restart ${PREFIXO}-1"
+echo "  docker stop \$(docker ps -q --filter name=$PREFIXO)"
+echo "  docker rm -f \$(docker ps -aq --filter name=$PREFIXO)"
